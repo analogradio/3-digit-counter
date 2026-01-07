@@ -1,5 +1,2 @@
 # 3-digit-counter
-17-bit shift register that drives 17 LEDs (`left[7:0]`, `red`, `right[7:0]`)
-Three 4-bit decimal counters (0–9) are cascaded to form a 3-digit decimal up-counter (000–999)
-The three decimal digits are shown on three 7-segment displays: `ss0` → ones digit, `ss1` → tens digit, `ss2` → hundreds digit
-
+17-bit serial-in/parallel-out shift register drives 17 LEDs (`left[7:0]`, `red`, `right[7:0]`) by shifting in 1s and clearing when all bits are 1. The MSB LED (`left[7]`) clocks three cascaded 4-bit decade counters to form a 000–999 decimal up-counter. The count is displayed on three 7-segment displays: `ss0` = ones, `ss1` = tens, `ss2` = hundreds, with leading-zero suppression on tens and hundreds.
